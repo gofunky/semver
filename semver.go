@@ -212,7 +212,9 @@ func ParseTolerant(s string) (Version, error) {
 	parts := strings.SplitN(s, ".", 3)
 	// Remove leading zeros.
 	for i, p := range parts {
-		parts[i] = strings.TrimPrefix(p, "0")
+		if len(p) > 1 {
+			parts[i] = strings.TrimPrefix(p, "0")
+		}
 	}
 	// Fill up shortened versions.
 	if len(parts) < 3 {
