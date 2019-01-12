@@ -1,26 +1,30 @@
-semver for golang [![Build Status](https://travis-ci.org/blang/semver.svg?branch=master)](https://travis-ci.org/blang/semver) [![GoDoc](https://godoc.org/github.com/blang/semver?status.svg)](https://godoc.org/github.com/blang/semver) [![Coverage Status](https://img.shields.io/coveralls/blang/semver.svg)](https://coveralls.io/r/blang/semver?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/blang/semver)](https://goreportcard.com/report/github.com/blang/semver)
-======
+# semver
+
+[![Build Status](https://travis-ci.com/gofunky/semver.svg?branch=master)](https://travis-ci.com/gofunky/semver)
+[![GoDoc](https://godoc.org/github.com/gofunky/semver?status.svg)](https://godoc.org/github.com/gofunky/semver)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gofunky/semver)](https://goreportcard.com/report/github.com/gofunky/semver)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea2478d087b94d7f920a607d73c5d8a0)](https://www.codacy.com/app/gofunky/semver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gofunky/semver&amp;utm_campaign=Badge_Grade)
+[![GitHub License](https://img.shields.io/github/license/gofunky/semver.svg)](https://github.com/gofunky/semver/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/gofunky/semver.svg)](https://github.com/gofunky/semver/commits/master)
 
 semver is a [Semantic Versioning](http://semver.org/) library written in golang. It fully covers spec version `2.0.0`.
 
-Usage
------
+## Usage
+
 ```bash
 $ go get github.com/blang/semver
 ```
 Note: Always vendor your dependencies or fix on a specific version tag.
 
 ```go
-import github.com/blang/semver
 v1, err := semver.Make("1.0.0-beta")
 v2, err := semver.Make("2.0.0-beta")
 v1.Compare(v2)
 ```
 
-Also check the [GoDocs](http://godoc.org/github.com/blang/semver).
+Also check the [GoDocs](http://godoc.org/github.com/gofunky/semver).
 
-Why should I use this lib?
------
+## Why should I use this lib?
 
 - Fully spec compatible
 - No reflection
@@ -33,8 +37,7 @@ Why should I use this lib?
 - Many features, see below
 
 
-Features
------
+## Features
 
 - Parsing and validation at all levels
 - Comparator-like comparisons
@@ -46,8 +49,7 @@ Features
 - database/sql compatible (sql.Scanner/Valuer)
 - encoding/json compatible (json.Marshaler/Unmarshaler)
 
-Ranges
-------
+## Ranges
 
 A `Range` is a set of conditions which specify which versions satisfy the range.
 
@@ -90,14 +92,11 @@ if range(v) {
 
 ```
 
-Example
------
+## Example
 
 Have a look at full examples in [examples/main.go](examples/main.go)
 
 ```go
-import github.com/blang/semver
-
 v, err := semver.Make("0.0.1-alpha.preview+123.github")
 fmt.Printf("Major: %d\n", v.Major)
 fmt.Printf("Minor: %d\n", v.Minor)
@@ -149,8 +148,7 @@ if err != nil {
 ```
 
 
-Benchmarks
------
+## Benchmarks
 
     BenchmarkParseSimple-4           5000000    390    ns/op    48 B/op   1 allocs/op
     BenchmarkParseComplex-4          1000000   1813    ns/op   256 B/op   7 allocs/op
@@ -174,21 +172,3 @@ Benchmarks
     BenchmarkRangeMatchComplex-4    10000000    153    ns/op     0 B/op   0 allocs/op
 
 See benchmark cases at [semver_test.go](semver_test.go)
-
-
-Motivation
------
-
-I simply couldn't find any lib supporting the full spec. Others were just wrong or used reflection and regex which i don't like.
-
-
-Contribution
------
-
-Feel free to make a pull request. For bigger changes create a issue first to discuss about it.
-
-
-License
------
-
-See [LICENSE](LICENSE) file.
