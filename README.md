@@ -4,7 +4,6 @@
 [![GoDoc](https://godoc.org/github.com/gofunky/semver?status.svg)](https://godoc.org/github.com/gofunky/semver)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gofunky/semver)](https://goreportcard.com/report/github.com/gofunky/semver)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea2478d087b94d7f920a607d73c5d8a0)](https://www.codacy.com/app/gofunky/semver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gofunky/semver&amp;utm_campaign=Badge_Grade)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=gofunky/semver)](https://dependabot.com)
 [![GitHub License](https://img.shields.io/github/license/gofunky/semver.svg)](https://github.com/gofunky/semver/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/gofunky/semver.svg)](https://github.com/gofunky/semver/commits/master)
 
